@@ -20,6 +20,10 @@ body {
   padding-bottom: 1.5rem;
 }
 
+.bg-gray {
+  background-color: $ghost-gray;
+}
+
 .marketing,
 .footer {
   padding-right: 1rem;
@@ -101,7 +105,7 @@ body {
 /* Resonpsive Stuff Customize container */
 @media (min-width: 48em) {
   .container {
-    max-width: 46rem;
+    max-width: 60rem;
   }
 }
 .container-narrow > hr {
@@ -145,6 +149,7 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+    padding:20px;
   }
 }
 

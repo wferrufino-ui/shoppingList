@@ -16,9 +16,9 @@ app.config(function($routeProvider) {
 
 app.controller("ShopCtrl", function($scope){
    	$scope.items = [
-  		{id: 1, text: 'Item 1', bought: true},
+  		/* {id: 1, text: 'Item 1', bought: true},
   		{id: 2, text: 'Item 2', bought: false},
-  		{id: 3, text: 'Item 3', bought: false}
+  		{id: 3, text: 'Item 3', bought: false} */
   	];
 
 	$scope.addItem = function() {
@@ -26,6 +26,7 @@ app.controller("ShopCtrl", function($scope){
 		$scope.itemEntry = '';
 	}
 	
+
   });
 })(app);
 
