@@ -15,9 +15,17 @@ $light-gray: #A1A7AA;
 $ghost-gray: #F4F4F4;
 
 /* Space out content a bit */
-body {
+html,body {
   font-family: 'Roboto', sans-serif;
-  padding-bottom: 1.5rem;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+.mainBody {
+  min-height:100%;
+  position:relative;
+  margin-bottom: -60px;
 }
 
 .bg-gray {
@@ -74,11 +82,16 @@ body {
 
 /* Custom page footer */
 .footer {
-  margin-top: 40px;
+  margin-top: -60px;
   padding-top: 1.5rem;
   color: #777;
   border-top: .01rem solid $light-gray;
   font-size: 11px;
+  position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+
 }
 
 //Navigation
@@ -136,6 +149,18 @@ body {
     margin-top: 1.5rem;
   }
 }
+
+/* Items count */
+.itemsCount {
+  border-bottom: 1px solid #CCC;
+  padding: 4px 0;
+  font-size: 14px;
+
+
+
+}
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 48em) {
