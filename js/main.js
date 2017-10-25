@@ -15,9 +15,9 @@ app.config(function($routeProvider) {
   "use strict";
   app.controller("ShopCtrl", function($scope){
    	$scope.items = [
-		{id: 1, text: 'Milk', bought: true},
-		{id: 2, text: 'Bread', bought: false},
-		{id: 3, text: 'Cheese', bought: false}
+		{id: 1, text: 'Item 1', bought: true},
+		{id: 2, text: 'Item 2', bought: false},
+		{id: 3, text: 'Item 3', bought: false}
 	];
 	$scope.addItem = function() {
 		$scope.items.push({text: $scope.itemEntry, bought: false, id: ($scope.items.length + 1) });
