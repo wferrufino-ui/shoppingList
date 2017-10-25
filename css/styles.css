@@ -8,7 +8,6 @@
 /* Space out content a bit */
 body {
   font-family: 'Roboto', sans-serif;
-  padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
 
 .marketing,
@@ -20,18 +19,11 @@ body {
   font-weight: 500; }
   .jumbotron p {
     margin-left: 32px; }
-  .jumbotron .fill:hover,
-  .jumbotron .fill:focus {
-    box-shadow: inset 0 0 0 2em var(--hover); }
   .jumbotron .fill {
-    --color: #A762CC;
-    --hover: #b962cc; }
+    --color: #c26eef; }
   .jumbotron a {
-    color: var(--color);
-    transition: 0.35s; }
+    color: var(--color); }
     .jumbotron a:hover, .jumbotron a:focus {
-      border-color: var(--hover);
-      color: #FFFFFF;
       text-decoration: none; }
   .jumbotron a {
     background: none;
@@ -40,15 +32,29 @@ body {
     line-height: 1;
     margin-top: 8px;
     padding: 1em 2em;
-    display: inline-block; }
+    display: inline-block;
+    text-transform: uppercase; }
 
 /* Custom page footer */
 .footer {
+  margin-top: 40px;
   padding-top: 1.5rem;
   color: #777;
-  border-top: 0.05rem solid #A1A7AA; }
+  border-top: 0.01rem solid #A1A7AA;
+  font-size: 11px; }
 
-/* Customize container */
+.navbar {
+  background-color: #222; }
+  .navbar img {
+    margin: auto;
+    padding: 0;
+    width: 50px; }
+
+.addItems {
+  background-color: #F4F4F4;
+  padding: 20px; }
+
+/* Resonpsive Stuff Customize container */
 @media (min-width: 48em) {
   .container {
     max-width: 46rem; } }
