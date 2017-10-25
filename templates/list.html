@@ -1,9 +1,28 @@
 <div ng-include="'templates/navigation.html'"></div>
 
-<div class="container addItems">
-	<div class="row">
-        <div class="col-md-12">
-    	  <input type="" name="" /> <button>Add Item</button>
-        </div>
-    </div>
+<div ng-controller="ShopCtrl">
+	<div class="container addItems">
+		<div class="row">
+	        <div class="col-md-12">
+	    	  <!-- <input type="" name="" /> <button>Add Item</button> -->
+	    	   <form class="form-horizontal" ng-submit="addItem()">
+			      <input type="text" ng-model="itemEntry" placeholder="Type and hit Enter to add item">
+			      <button>Add Item</button>
+			    </form>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="container addItems">
+		<div class="row">
+	        <div class="col-md-12">
+	    		 <ul class="unstyled">
+			      <li ng-repeat="item in items">
+			        <input type="checkbox" id="item-{{item.id}}" ng-model="item.bought">
+			        <label for="item-{{item.id}}" class="{{isBought(item.bought)}}">{{item.text}}<span></span></label>
+			      </li>
+			    </ul>
+	        </div>
+	    </div>
+	</div>
 </div>
