@@ -3,10 +3,12 @@ var app = angular.module("app", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
+        controller: 'HomeCtrl',
         templateUrl : "templates/home.html"
     })
     .when("/list", {
-        templateUrl : "templates/list.html"
+        controller: 'ShopCtrl',
+        templateUrl : "templates/list.html"        
     })
 });
 
@@ -14,26 +16,35 @@ app.config(function($routeProvider) {
 (function(app){
   "use strict";
 
-app.controller("ShopCtrl", function($scope){
-   	$scope.items = [
-  		/* {id: 1, text: 'Item 1', bought: true},
-  		{id: 2, text: 'Item 2', bought: false},
-  		{id: 3, text: 'Item 3', bought: false} */
-  	];
+  // List (shopping list page)
+  app.controller("ShopCtrl", function($scope, $rootScope){
 
-    $scope.clearBought = function() {
-      $scope.items = _.filter($scope.items, function(item) {
-        return !item.bought;
-      });
-    }
+      $rootScope.hideClearBtn = false;
 
-  	$scope.addItem = function() {
-  		$scope.items.push({text: $scope.itemEntry, bought: false, id: ($scope.items.length + 1) });
-  		$scope.itemEntry = '';
-  	}
-	
+     	$scope.items = [
+    		/* {id: 1, text: 'Item 1', bought: true} */
+    	];
 
+      $scope.clearBought = function() {
+        $scope.items = _.filter($scope.items, function(item) {
+          return !item.bought;
+        });
+      }
+
+    	$scope.addItem = function() {
+    		$scope.items.push({text: $scope.itemEntry, bought: false, id: ($scope.items.length + 1) });
+    		$scope.itemEntry = '';
+    	}
+  	
   });
+
+  // Home Page
+  app.controller("HomeCtrl", function($scope, $rootScope){
+    
+    $rootScope.hideClearBtn = true;
+  
+  });
+
 })(app);
 
 

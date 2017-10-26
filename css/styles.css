@@ -42,13 +42,26 @@ html, body {
 
 /* Custom page footer */
 .footer {
+  width: 100%;
+  margin-left: -15px;
   position: fixed;
   bottom: 0;
   margin-top: 0;
   padding-top: 1.5rem;
-  color: #777;
-  border-top: 0.01rem solid #A1A7AA;
-  font-size: 11px; }
+  color: #A1A7AA;
+  background-color: #222;
+  font-size: 11px;
+  height: 70px; }
+  .footer p {
+    margin: 0 0 0 10px; }
+  .footer .clrBtnWrapper {
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+    margin-top: -25px;
+    margin-right: 20px; }
+    .footer .clrBtnWrapper .btn {
+      cursor: pointer; }
 
 .navbar {
   background-color: #222; }
@@ -66,26 +79,23 @@ html, body {
     padding: 5px 10px; }
     .addItems form input:focus {
       outline: none; }
-  .addItems form .round-button {
+  .addItems form .fill {
+    --color: #c26eef; }
+  .addItems form button {
+    outline: none;
     cursor: pointer;
+    color: var(--color); }
+    .addItems form button:hover, .addItems form button:focus {
+      text-decoration: none; }
+  .addItems form button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin-left: 15px;
+    padding: 13px 16px;
     display: inline-block;
-    width: 45px;
-    height: 45px;
-    line-height: 42px;
-    border: 2px solid #f5f5f5;
-    border-radius: 50%;
-    color: #f5f5f5;
-    text-align: center;
-    text-decoration: none;
-    background: #A963CD;
-    box-shadow: 0 0 3px gray;
-    font-size: 25px;
-    font-weight: bold;
-    margin-left: 10px; }
-    .addItems form .round-button:focus {
-      outline: none; }
-  .addItems form .round-button:hover {
-    background: #A963CD; }
+    text-transform: uppercase; }
 
 /* Resonpsive Stuff Customize container */
 @media (min-width: 48em) {

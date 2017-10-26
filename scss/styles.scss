@@ -76,13 +76,35 @@ html,body {
 
 /* Custom page footer */
 .footer {
+  width: 100%;
+  margin-left: -15px;
   position: fixed;
   bottom: 0;
   margin-top: 0;
   padding-top: 1.5rem;
-  color: #777;
-  border-top: .01rem solid $light-gray;
+  color: $light-gray;
+  background-color:$black;
   font-size: 11px;
+  height: 70px;
+
+  p {
+    margin: 0 0 0 10px;
+  }
+
+  .clrBtnWrapper {
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+    margin-top: -25px;
+    margin-right: 20px;
+
+    .btn {
+      cursor: pointer;
+    }
+
+  }
+
+
 }
 
 //Navigation
@@ -112,36 +134,43 @@ html,body {
       &:focus {
         outline: none;
       }
-
     }
 
-    .round-button {
+    $colors: (
+      fill: #c26eef,
+    );
+
+
+    @each $button, $color in $colors {
+      .#{$button} {
+        --color: $color;
+      }
+    }
+
+    button {  
+      outline: none;
       cursor: pointer;
-        display:inline-block;
-        width:45px;
-        height:45px;
-        line-height:42px;
-        border: 2px solid #f5f5f5;
-        border-radius: 50%;
-        color:#f5f5f5;
-        text-align:center;
-        text-decoration:none;
-        background: $purple;
-        box-shadow: 0 0 3px gray;
-        font-size:25px;
-        font-weight:bold;
-        margin-left: 10px;
-
-        &:focus {
-          outline: none;
-        }
+      color: var(--color);
+      
+      &:hover,
+      &:focus { 
+        text-decoration: none;
+      }
     }
-    .round-button:hover {
-        background: $purple;
+
+    // Basic button styles
+   button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin-left: 15px;
+    padding: 13px 16px;
+    display: inline-block;
+    text-transform: uppercase;
     }
 
   }
-
 }
 
 

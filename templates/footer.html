@@ -1,9 +1,16 @@
- <div class="container">
+ <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                   <footer class="footer">
                     <p>&copy;2017. A William Ferrufino Production. </p>
+                    <div class="clrBtnWrapper" ng-hide="hideClearBtn">
+
+                    	<button ng-hide="hideClearBtn" class="btn btn-large btn-danger pull-right" ng-click="clearBought()">
+                    		Remove Items
+                    	</button>
+                    </div>       
                   </footer>
             </div>
         </div>
-    </div>
+</div>
+
