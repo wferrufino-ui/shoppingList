@@ -19,7 +19,16 @@ app.config(function($routeProvider) {
   // List (shopping list page)
   app.controller("ShopCtrl", function($scope, $rootScope){
 
-      $rootScope.hideClearBtn = false;
+    // if($scope.items.length >= 1) {
+    //   $rootScope.hideClearBtn = false;
+    // }
+    // else {
+    //   $rootScope.hideClearBtn = true;
+    // }
+      
+
+
+      $rootScope.showCopyRight = true;
 
      	$scope.items = [
     		/* {id: 1, text: 'Item 1', bought: true} */
@@ -42,7 +51,8 @@ app.config(function($routeProvider) {
   app.controller("HomeCtrl", function($scope, $rootScope){
     
     $rootScope.hideClearBtn = true;
-  
+    $rootScope.showCopyRight = false;
+
   });
 
 })(app);

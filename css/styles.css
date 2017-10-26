@@ -55,11 +55,10 @@ html, body {
   .footer p {
     margin: 0 0 0 10px; }
   .footer .clrBtnWrapper {
-    vertical-align: top;
     display: inline-block;
-    float: right;
-    margin-top: -25px;
-    margin-right: 20px; }
+    margin-top: -8px;
+    margin-right: 20px;
+    text-align: center; }
     .footer .clrBtnWrapper .btn {
       cursor: pointer; }
 
@@ -76,7 +75,8 @@ html, body {
   .addItems form input {
     border: 1px solid #A1A7AA;
     height: 45px;
-    padding: 5px 10px; }
+    padding: 5px 10px;
+    width: 60%; }
     .addItems form input:focus {
       outline: none; }
   .addItems form .fill {
@@ -92,8 +92,8 @@ html, body {
     border: 2px solid;
     font: inherit;
     line-height: 1;
-    margin-left: 15px;
-    padding: 13px 16px;
+    margin-left: 10px;
+    padding: 12px 13px;
     display: inline-block;
     text-transform: uppercase; }
 
