@@ -7,9 +7,12 @@
 		<div class="container addItems">
 			<div class="row">
 		        <div class="col-md-12">
-		    	   <form class="form-horizontal" ng-submit="addItem()">
-				      <input type="text" ng-model="itemEntry" placeholder="Type and hit Enter to add item">
-				      <button>Add Item</button>
+		    	   <form name="form" class="form-horizontal" ng-submit="addItem()">
+		    	   	  <input type="text" ng-model="itemEntry" placeholder="Enter Item" required>
+				      	<button class="round-button">
+				      		<i class="fa fa-plus" aria-hidden="true"></i>
+						</button>
+				       <!-- <span ng-show="form.itemEntry.$error.required">Please enter something!</span>  -->
 				    </form>
 		        </div>
 		    </div>
@@ -40,5 +43,7 @@
 	        </div>
 	    </div>
 	</div>
+
+	 <button class="btn btn-large btn-danger" ng-click="clearBought()">Remove Bought</button>
 	
 </div>
