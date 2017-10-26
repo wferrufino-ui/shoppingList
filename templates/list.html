@@ -33,9 +33,9 @@
 		<div class="row">
 	        <div class="col-md-12">
 	    		 <ul class="unstyled">
-			      <li ng-repeat="item in items">
-			        <input type="checkbox" id="item-{{item.id}}" ng-model="item.bought">
-			        <label for="item-{{item.id}}" class="{{isBought(item.bought)}}">{{item.text}}<span></span></label>
+			      <li class="listItem" ng-repeat="item in items">
+			        <input type="checkbox" id="item-{{item.id}}" ng-model="item.bought" class="checkbox-custom">
+			        <label for="item-{{item.id}}" class="checkbox-custom-label {{isBought(item.bought)}}">{{item.text}}<span></span></label>
 			      </li>
 			    </ul>
 	        </div>
