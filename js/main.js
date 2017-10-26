@@ -23,9 +23,6 @@ app.config(function($routeProvider) {
 
    	$scope.items = [];
 
-
-     
-
     $scope.nextId = $scope.items.length + 1
  
     $scope.clearBought = function() {
@@ -56,7 +53,6 @@ app.config(function($routeProvider) {
   // Home Page
   app.controller("HomeCtrl", function($scope, $rootScope){
     
-    $rootScope.hideClearBtn = true;
     $rootScope.showCopyRight = false;
 
   });
