@@ -17,12 +17,14 @@ app.config(function($routeProvider) {
   "use strict";
 
   // List (shopping list page)
-  app.controller("ShopCtrl", function($scope, $rootScope){
+  app.controller("ShopCtrl", function($scope, $rootScope, $filter){
 
-      $rootScope.showCopyRight = true;
+    $rootScope.showCopyRight = true;
 
-     	$scope.items = [
-      ];
+   	$scope.items = [];
+
+
+     
 
     $scope.nextId = $scope.items.length + 1
  
@@ -38,6 +40,13 @@ app.config(function($routeProvider) {
         $scope.itemEntry = '';
     }
  
+    $scope.$watch("items", function(n, o) {
+        var trues = $filter("filter")(n, {
+            bought: true
+        });
+        $scope.flag = trues.length;
+    }, true);
+
     $scope.isBought = function(bought) {
         return (bought) ? 'bought' : 'not-bought';
     }

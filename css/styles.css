@@ -140,46 +140,44 @@ html, body {
     border-bottom: 0;
     padding: 20px; } }
 
-ul {
-  margin-left: -40px; }
-
-ul li.listItem {
-  list-style-type: none;
-  width: 100%;
-  padding: 20px 10px;
-  background-color: #EEE;
-  margin: 10px 0;
-  border: 1px solid #A1A7AA; }
-
-.checkbox-custom {
-  opacity: 0;
-  position: absolute; }
-
-.checkbox-custom, .checkbox-custom-label {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 5px;
-  cursor: pointer; }
-
-.checkbox-custom-label {
-  position: relative;
-  font-size: 20px; }
-
-.checkbox-custom + .checkbox-custom-label:before {
-  content: '';
-  background: #fff;
-  border: 2px solid #ddd;
-  display: inline-block;
-  vertical-align: middle;
-  width: 40px;
-  height: 40px;
-  padding: 2px;
-  margin-right: 10px;
-  text-align: center; }
-
-.checkbox-custom:checked + .checkbox-custom-label:before {
-  background: #A963CD; }
-
-.checkbox-custom:focus + .checkbox-custom-label {
-  outline: 1px solid #ddd;
-  /* focus style */ }
+.list {
+  padding-bottom: 70px; }
+  .list .bought {
+    text-decoration: line-through;
+    color: #acb5b5; }
+  .list ul {
+    margin-left: -40px; }
+  .list ul li.listItem {
+    list-style-type: none;
+    width: 100%;
+    padding: 12px 10px;
+    background-color: #EEE;
+    margin: 10px 0;
+    border: 1px solid #A1A7AA; }
+  .list .checkbox-custom {
+    opacity: 0;
+    position: absolute; }
+  .list .checkbox-custom, .list .checkbox-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer; }
+  .list .checkbox-custom-label {
+    position: relative;
+    font-size: 16px; }
+  .list .checkbox-custom + .checkbox-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center; }
+  .list .checkbox-custom:checked + .checkbox-custom-label:before {
+    background: #A963CD; }
+  .list .checkbox-custom:focus + .checkbox-custom-label {
+    outline: 1px solid #ddd;
+    /* focus style */ }
